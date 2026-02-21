@@ -43,7 +43,7 @@ jobs:
 
       - name: Commit cards
         run: |
-          if git diff --quiet -- profile/*.svg; then
+          if [ -z "$(git status --porcelain -- profile)" ]; then
             exit 0
           fi
 
