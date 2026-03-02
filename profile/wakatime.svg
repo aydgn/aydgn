@@ -745,7 +745,7 @@
     <g transform="translate(230, 25)">
       <circle cx="5" cy="6" r="5" fill="#e34c26" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        HTML - 589 hrs 9 mins
+        HTML - 589 hrs 13 mins
       </text>
     </g>
   
@@ -759,14 +759,14 @@
     <g transform="translate(230, 50)">
       <circle cx="5" cy="6" r="5" fill="#ff5a03" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        Astro - 156 hrs 43 mins
+        Astro - 156 hrs 56 mins
       </text>
     </g>
   
     <g transform="translate(25, 75)">
       <circle cx="5" cy="6" r="5" fill="#083fa1" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        Markdown - 132 hrs 12 mins
+        Markdown - 132 hrs 20 mins
       </text>
     </g>
   
@@ -871,7 +871,7 @@
     <g transform="translate(230, 250)">
       <circle cx="5" cy="6" r="5" fill="#F44D27" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        Git Config - 4 hrs 11 mins
+        Git Config - 4 hrs 14 mins
       </text>
     </g>
   
