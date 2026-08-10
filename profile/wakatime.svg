@@ -1,135 +1,62 @@
-
-      <svg
-        width="495"
-        height="90"
-        viewBox="0 0 495 90"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        role="img"
-        aria-labelledby="descId"
-      >
-        <title id="titleId"></title>
-        <desc id="descId"></desc>
-        <style>
-          .header {
-            font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
-            fill: #2f80ed;
-            animation: fadeInAnimation 0.8s ease-in-out forwards;
-          }
-          @supports(-moz-appearance: auto) {
-            /* Selector detects Firefox */
-            .header { font-size: 15.5px; }
-          }
-          
-    
-    .stat {
-      font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #434d58;
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="495" height="195" viewBox="0 0 495 195" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="titleId descId">
+  <title id="titleId">WakaTime Stats</title>
+  <desc id="descId">All-time aggregate coding time: 26 hrs 15 mins. Top languages: JavaScript 5.48%, HTML 3.54%, JSON 1.01%, SCSS 0.76%, TOML 0.76%, Astro 0.74%.</desc>
+  <style>
+    .card { fill: #fffefe; stroke: #e4e2e2; }
+    .title { fill: #2f80ed; font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; }
+    .subtitle { fill: #57606a; font: 400 12px 'Segoe UI', Ubuntu, Sans-Serif; }
+    .lang-name { fill: #434d58; font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; }
+    .lang-value { fill: #57606a; font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; }
+    @media (prefers-color-scheme: dark) {
+      .card { fill: #0d1117; stroke: #30363d; }
+      .title { fill: #58a6ff; }
+      .subtitle, .lang-value { fill: #8b949e; }
+      .lang-name { fill: #c9d1d9; }
     }
-    @supports(-moz-appearance: auto) {
-      /* Selector detects Firefox */
-      .stat { font-size:12px; }
-    }
-    .stagger {
-      opacity: 0;
-      animation: fadeInAnimation 0.3s ease-in-out forwards;
-    }
-    .not_bold { font-weight: 400 }
-    .bold { font-weight: 700 }
-  
-    @keyframes slideInAnimation {
-      from {
-        width: 0;
-      }
-      to {
-        width: calc(100%-100px);
-      }
-    }
-    @keyframes growWidthAnimation {
-      from {
-        width: 0;
-      }
-      to {
-        width: 100%;
-      }
-    }
-    .lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #434d58 }
-    #rect-mask rect{
-      animation: slideInAnimation 1s ease-in-out forwards;
-    }
-    .lang-progress{
-      animation: growWidthAnimation 0.6s ease-in-out forwards;
-    }
-    
-
-          
-      /* Animations */
-      @keyframes scaleInAnimation {
-        from {
-          transform: translate(-5px, 5px) scale(0);
-        }
-        to {
-          transform: translate(-5px, 5px) scale(1);
-        }
-      }
-      @keyframes fadeInAnimation {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-    
-          
-        </style>
-
-        
-
-        <rect
-          data-testid="card-bg"
-          x="0.5"
-          y="0.5"
-          rx="4.5"
-          height="99%"
-          stroke="#e4e2e2"
-          width="494"
-          fill="#fffefe"
-          stroke-opacity="1"
-        />
-
-        
-      <g
-        data-testid="card-title"
-        transform="translate(25, 35)"
-      >
-        <g transform="translate(0, 0)">
-      <text
-        x="0"
-        y="0"
-        class="header"
-        data-testid="header"
-      >WakaTime Stats</text>
+  </style>
+  <rect class="card" x="0.5" y="0.5" width="494" height="194" rx="4.5" />
+  <text x="25" y="32" class="title">WakaTime Stats</text>
+  <text x="25" y="52" class="subtitle">All time · 26 hrs 15 mins</text>
+  <g clip-path="url(#language-bar-clip)" data-testid="lang-progress">
+    <rect x="25.00" y="72" width="198.42" height="8" fill="#f1e05a" />
+    <rect x="223.42" y="72" width="128.18" height="8" fill="#e34c26" />
+    <rect x="351.60" y="72" width="36.57" height="8" fill="#292929" />
+    <rect x="388.17" y="72" width="27.52" height="8" fill="#c6538c" />
+    <rect x="415.69" y="72" width="27.52" height="8" fill="#8b949e" />
+    <rect x="443.21" y="72" width="26.79" height="8" fill="#8b949e" />
+  </g>
+  <clipPath id="language-bar-clip">
+    <rect x="25" y="72" width="445" height="8" rx="4" />
+  </clipPath>
+    <g data-testid="lang-item">
+      <circle cx="30" cy="109" r="5" fill="#f1e05a" />
+      <text data-testid="lang-name" x="40" y="113" class="lang-name">JavaScript</text>
+      <text x="235" y="113" text-anchor="end" class="lang-value">5.48%</text>
     </g>
-      </g>
-    
-
-        <g
-          data-testid="main-card-body"
-          transform="translate(0, 55)"
-        >
-          
-    <svg x="0" y="0" width="100%">
-      
-      <mask id="rect-mask">
-      <rect x="25" y="0" width="440" height="8" fill="white" rx="5" />
-      </mask>
-      
-      
-    <text x="25" y="11" class="stat bold" fill="#434d58">WakaTime user profile not public</text>
-  
-    
-    </svg>
-  
-        </g>
-      </svg>
-    
+    <g data-testid="lang-item">
+      <circle cx="30" cy="134" r="5" fill="#e34c26" />
+      <text data-testid="lang-name" x="40" y="138" class="lang-name">HTML</text>
+      <text x="235" y="138" text-anchor="end" class="lang-value">3.54%</text>
+    </g>
+    <g data-testid="lang-item">
+      <circle cx="30" cy="159" r="5" fill="#292929" />
+      <text data-testid="lang-name" x="40" y="163" class="lang-name">JSON</text>
+      <text x="235" y="163" text-anchor="end" class="lang-value">1.01%</text>
+    </g>
+    <g data-testid="lang-item">
+      <circle cx="260" cy="109" r="5" fill="#c6538c" />
+      <text data-testid="lang-name" x="270" y="113" class="lang-name">SCSS</text>
+      <text x="465" y="113" text-anchor="end" class="lang-value">0.76%</text>
+    </g>
+    <g data-testid="lang-item">
+      <circle cx="260" cy="134" r="5" fill="#8b949e" />
+      <text data-testid="lang-name" x="270" y="138" class="lang-name">TOML</text>
+      <text x="465" y="138" text-anchor="end" class="lang-value">0.76%</text>
+    </g>
+    <g data-testid="lang-item">
+      <circle cx="260" cy="159" r="5" fill="#8b949e" />
+      <text data-testid="lang-name" x="270" y="163" class="lang-name">Astro</text>
+      <text x="465" y="163" text-anchor="end" class="lang-value">0.74%</text>
+    </g>
+</svg>
