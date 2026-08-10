@@ -44,14 +44,28 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: true
 
-      - name: Commit cards
+      - name: Refresh README card cache
         run: |
           if [ -z "$(git status --porcelain -- profile)" ]; then
             exit 0
           fi
 
+          version="${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+
+          sed -E -i \
+            -e "s#(\./profile/wakatime\.svg)(\?v=[^)]+)?#\1?v=${version}#g" \
+            -e "s#(\./profile/stats\.svg)(\?v=[^)]+)?#\1?v=${version}#g" \
+            -e "s#(\./profile/top-langs\.svg)(\?v=[^)]+)?#\1?v=${version}#g" \
+            readme.md
+
+      - name: Commit cards
+        run: |
+          if [ -z "$(git status --porcelain -- profile readme.md)" ]; then
+            exit 0
+          fi
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile/*.svg
+          git add profile/*.svg readme.md
           git commit -m "Update README cards"
           git push
