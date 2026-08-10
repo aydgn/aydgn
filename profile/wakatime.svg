@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="495" height="195" viewBox="0 0 495 195" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="titleId descId">
   <title id="titleId">WakaTime Stats</title>
-  <desc id="descId">All-time aggregate coding time: 26 hrs 15 mins. Top languages: JavaScript 5.48%, HTML 3.54%, JSON 1.01%, SCSS 0.76%, TOML 0.76%, Astro 0.74%.</desc>
+  <desc id="descId">All-time aggregate coding time: 6,285 hrs 3 mins. Top languages: JavaScript 8.18%, HTML 8.11%, SCSS 4.06%, Markdown 3.60%, Astro 2.39%, Image (svg) 1.85%.</desc>
   <style>
     .card { fill: #fffefe; stroke: #e4e2e2; }
     .title { fill: #2f80ed; font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; }
@@ -17,14 +17,14 @@
   </style>
   <rect class="card" x="0.5" y="0.5" width="494" height="194" rx="4.5" />
   <text x="25" y="32" class="title">WakaTime Stats</text>
-  <text x="25" y="52" class="subtitle">All time · 26 hrs 15 mins</text>
+  <text x="25" y="52" class="subtitle">All time · 6,285 hrs 3 mins</text>
   <g clip-path="url(#language-bar-clip)" data-testid="lang-progress">
-    <rect x="25.00" y="72" width="198.42" height="8" fill="#f1e05a" />
-    <rect x="223.42" y="72" width="128.18" height="8" fill="#e34c26" />
-    <rect x="351.60" y="72" width="36.57" height="8" fill="#292929" />
-    <rect x="388.17" y="72" width="27.52" height="8" fill="#c6538c" />
-    <rect x="415.69" y="72" width="27.52" height="8" fill="#8b949e" />
-    <rect x="443.21" y="72" width="26.79" height="8" fill="#8b949e" />
+    <rect x="25.00" y="72" width="129.13" height="8" fill="#f1e05a" />
+    <rect x="154.13" y="72" width="128.02" height="8" fill="#e34c26" />
+    <rect x="282.15" y="72" width="64.09" height="8" fill="#c6538c" />
+    <rect x="346.24" y="72" width="56.83" height="8" fill="#083fa1" />
+    <rect x="403.07" y="72" width="37.73" height="8" fill="#8b949e" />
+    <rect x="440.80" y="72" width="29.20" height="8" fill="#8b949e" />
   </g>
   <clipPath id="language-bar-clip">
     <rect x="25" y="72" width="445" height="8" rx="4" />
@@ -32,31 +32,31 @@
     <g data-testid="lang-item">
       <circle cx="30" cy="109" r="5" fill="#f1e05a" />
       <text data-testid="lang-name" x="40" y="113" class="lang-name">JavaScript</text>
-      <text x="235" y="113" text-anchor="end" class="lang-value">5.48%</text>
+      <text x="235" y="113" text-anchor="end" class="lang-value">8.18%</text>
     </g>
     <g data-testid="lang-item">
       <circle cx="30" cy="134" r="5" fill="#e34c26" />
       <text data-testid="lang-name" x="40" y="138" class="lang-name">HTML</text>
-      <text x="235" y="138" text-anchor="end" class="lang-value">3.54%</text>
+      <text x="235" y="138" text-anchor="end" class="lang-value">8.11%</text>
     </g>
     <g data-testid="lang-item">
-      <circle cx="30" cy="159" r="5" fill="#292929" />
-      <text data-testid="lang-name" x="40" y="163" class="lang-name">JSON</text>
-      <text x="235" y="163" text-anchor="end" class="lang-value">1.01%</text>
+      <circle cx="30" cy="159" r="5" fill="#c6538c" />
+      <text data-testid="lang-name" x="40" y="163" class="lang-name">SCSS</text>
+      <text x="235" y="163" text-anchor="end" class="lang-value">4.06%</text>
     </g>
     <g data-testid="lang-item">
-      <circle cx="260" cy="109" r="5" fill="#c6538c" />
-      <text data-testid="lang-name" x="270" y="113" class="lang-name">SCSS</text>
-      <text x="465" y="113" text-anchor="end" class="lang-value">0.76%</text>
+      <circle cx="260" cy="109" r="5" fill="#083fa1" />
+      <text data-testid="lang-name" x="270" y="113" class="lang-name">Markdown</text>
+      <text x="465" y="113" text-anchor="end" class="lang-value">3.60%</text>
     </g>
     <g data-testid="lang-item">
       <circle cx="260" cy="134" r="5" fill="#8b949e" />
-      <text data-testid="lang-name" x="270" y="138" class="lang-name">TOML</text>
-      <text x="465" y="138" text-anchor="end" class="lang-value">0.76%</text>
+      <text data-testid="lang-name" x="270" y="138" class="lang-name">Astro</text>
+      <text x="465" y="138" text-anchor="end" class="lang-value">2.39%</text>
     </g>
     <g data-testid="lang-item">
       <circle cx="260" cy="159" r="5" fill="#8b949e" />
-      <text data-testid="lang-name" x="270" y="163" class="lang-name">Astro</text>
-      <text x="465" y="163" text-anchor="end" class="lang-value">0.74%</text>
+      <text data-testid="lang-name" x="270" y="163" class="lang-name">Image (svg)</text>
+      <text x="465" y="163" text-anchor="end" class="lang-value">1.85%</text>
     </g>
 </svg>
