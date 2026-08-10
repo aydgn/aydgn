@@ -2,7 +2,10 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const API_URL = "https://wakatime.com/api/v1/users/current/stats/all_time";
+const STATS_API_URL =
+  "https://wakatime.com/api/v1/users/current/stats/all_time";
+const LIFETIME_API_URL =
+  "https://wakatime.com/api/v1/users/current/all_time_since_today";
 const MAX_ATTEMPTS = 5;
 const RETRY_DELAY_MS = 10_000;
 const CARD_WIDTH = 495;
@@ -136,51 +139,90 @@ function validateStats(payload) {
   };
 }
 
+function validateLifetimeTotal(payload) {
+  const data = payload?.data;
+  const totalSeconds = toFiniteNumber(data?.total_seconds);
+
+  if (
+    !data ||
+    typeof data !== "object" ||
+    Array.isArray(data) ||
+    data.is_up_to_date !== true ||
+    totalSeconds === null
+  ) {
+    return null;
+  }
+
+  return formatDuration(Math.max(0, totalSeconds));
+}
+
+async function parseJsonResponse(response) {
+  const responseText = await response.text();
+
+  if (!responseText) {
+    return null;
+  }
+
+  try {
+    return JSON.parse(responseText);
+  } catch {
+    return null;
+  }
+}
+
 async function fetchStats(apiKey) {
   const authorization = `Basic ${Buffer.from(apiKey, "utf8").toString("base64")}`;
+  const requestOptions = {
+    headers: {
+      Accept: "application/json",
+      Authorization: authorization,
+      "User-Agent": "aydgn-profile-wakatime-card",
+    },
+  };
   let latestUsableStats = null;
   let lastFailure = "WakaTime did not return usable aggregate statistics.";
 
   for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt += 1) {
     try {
-      const response = await fetch(API_URL, {
-        headers: {
-          Accept: "application/json",
-          Authorization: authorization,
-          "User-Agent": "aydgn-profile-wakatime-card",
-        },
-      });
+      const [statsResponse, lifetimeResponse] = await Promise.all([
+        fetch(STATS_API_URL, requestOptions),
+        fetch(LIFETIME_API_URL, requestOptions),
+      ]);
+      const failedResponse = [statsResponse, lifetimeResponse].find(
+        (response) => response.status !== 200 && response.status !== 202,
+      );
 
-      if (response.status !== 200 && response.status !== 202) {
-        lastFailure = `WakaTime API request failed with HTTP ${response.status}.`;
+      if (failedResponse) {
+        lastFailure = `WakaTime API request failed with HTTP ${failedResponse.status}.`;
 
-        if (response.status < 500 && response.status !== 429) {
+        if (failedResponse.status < 500 && failedResponse.status !== 429) {
           throw new Error(lastFailure);
         }
       } else {
-        const responseText = await response.text();
-        let payload = null;
+        const [statsPayload, lifetimePayload] = await Promise.all([
+          parseJsonResponse(statsResponse),
+          parseJsonResponse(lifetimeResponse),
+        ]);
+        const stats = validateStats(statsPayload);
+        const lifetimeTotal = validateLifetimeTotal(lifetimePayload);
+        const combinedStats =
+          stats && lifetimeTotal
+            ? { ...stats, humanReadableTotal: lifetimeTotal }
+            : null;
 
-        if (responseText) {
-          try {
-            payload = JSON.parse(responseText);
-          } catch {
-            lastFailure = "WakaTime API returned an invalid JSON response.";
-          }
-        }
-
-        const stats = validateStats(payload);
-
-        if (stats) {
-          latestUsableStats = stats;
+        if (combinedStats) {
+          latestUsableStats = combinedStats;
+        } else if (!lifetimeTotal) {
+          lastFailure = "WakaTime lifetime total is still being prepared.";
         } else {
           lastFailure = "WakaTime did not return usable aggregate statistics.";
         }
 
-        const cacheIsReady = response.status === 200 && stats?.isUpToDate;
+        const languageCacheIsReady =
+          statsResponse.status === 200 && stats?.isUpToDate;
 
-        if (stats && cacheIsReady) {
-          return stats;
+        if (combinedStats && languageCacheIsReady) {
+          return combinedStats;
         }
       }
     } catch (error) {
