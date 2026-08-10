@@ -36,13 +36,9 @@ jobs:
           fail_on_error: true
 
       - name: Generate WakaTime card
-        uses: stats-organization/github-readme-stats-action@v2
-        with:
-          card: wakatime
-          options: username=ag&hide=other&layout=compact
-          path: profile/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-          fail_on_error: true
+        env:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+        run: node .github/scripts/generate-wakatime-card.mjs
 
       - name: Refresh README card cache
         run: |
