@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="495" height="195" viewBox="0 0 495 195" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="titleId descId">
   <title id="titleId">WakaTime Stats</title>
-  <desc id="descId">All-time aggregate coding time: 6,285 hrs 3 mins. Top languages: JavaScript 8.18%, HTML 8.11%, SCSS 4.06%, Markdown 3.60%, Astro 2.39%, Image (svg) 1.85%.</desc>
+  <desc id="descId">All-time aggregate coding time: 6,278 hrs 26 mins. Top languages: JavaScript 8.18%, HTML 8.11%, SCSS 4.06%, Markdown 3.60%, Astro 2.39%, Image (svg) 1.85%.</desc>
   <style>
     .card { fill: #fffefe; stroke: #e4e2e2; }
     .title { fill: #2f80ed; font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; }
@@ -17,7 +17,7 @@
   </style>
   <rect class="card" x="0.5" y="0.5" width="494" height="194" rx="4.5" />
   <text x="25" y="32" class="title">WakaTime Stats</text>
-  <text x="25" y="52" class="subtitle">All time · 6,285 hrs 3 mins</text>
+  <text x="25" y="52" class="subtitle">All time · 6,278 hrs 26 mins</text>
   <g clip-path="url(#language-bar-clip)" data-testid="lang-progress">
     <rect x="25.00" y="72" width="129.13" height="8" fill="#f1e05a" />
     <rect x="154.13" y="72" width="128.02" height="8" fill="#e34c26" />
