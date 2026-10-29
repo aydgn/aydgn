@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="495" height="195" viewBox="0 0 495 195" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="titleId descId">
   <title id="titleId">WakaTime Stats</title>
-  <desc id="descId">All-time aggregate coding time: 6,814 hrs 42 mins. Top languages: JavaScript 8.19%, HTML 7.91%, Markdown 4.63%, SCSS 3.90%, Astro 2.21%, JSON 1.91%.</desc>
+  <desc id="descId">All-time aggregate coding time: 6,823 hrs 36 mins. Top languages: JavaScript 8.18%, HTML 7.90%, Markdown 4.65%, SCSS 3.90%, Astro 2.21%, JSON 1.91%.</desc>
   <style>
     .card { fill: #fffefe; stroke: #e4e2e2; }
     .title { fill: #2f80ed; font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; }
@@ -17,11 +17,11 @@
   </style>
   <rect class="card" x="0.5" y="0.5" width="494" height="194" rx="4.5" />
   <text x="25" y="32" class="title">WakaTime Stats</text>
-  <text x="25" y="52" class="subtitle">All time · 6,814 hrs 42 mins</text>
+  <text x="25" y="52" class="subtitle">All time · 6,823 hrs 36 mins</text>
   <g clip-path="url(#language-bar-clip)" data-testid="lang-progress">
-    <rect x="25.00" y="72" width="126.77" height="8" fill="#f1e05a" />
-    <rect x="151.77" y="72" width="122.43" height="8" fill="#e34c26" />
-    <rect x="274.20" y="72" width="71.66" height="8" fill="#083fa1" />
+    <rect x="25.00" y="72" width="126.61" height="8" fill="#f1e05a" />
+    <rect x="151.61" y="72" width="122.28" height="8" fill="#e34c26" />
+    <rect x="273.89" y="72" width="71.97" height="8" fill="#083fa1" />
     <rect x="345.86" y="72" width="60.37" height="8" fill="#c6538c" />
     <rect x="406.23" y="72" width="34.21" height="8" fill="#8b949e" />
     <rect x="440.44" y="72" width="29.56" height="8" fill="#292929" />
@@ -32,17 +32,17 @@
     <g data-testid="lang-item">
       <circle cx="30" cy="109" r="5" fill="#f1e05a" />
       <text data-testid="lang-name" x="40" y="113" class="lang-name">JavaScript</text>
-      <text x="235" y="113" text-anchor="end" class="lang-value">8.19%</text>
+      <text x="235" y="113" text-anchor="end" class="lang-value">8.18%</text>
     </g>
     <g data-testid="lang-item">
       <circle cx="30" cy="134" r="5" fill="#e34c26" />
       <text data-testid="lang-name" x="40" y="138" class="lang-name">HTML</text>
-      <text x="235" y="138" text-anchor="end" class="lang-value">7.91%</text>
+      <text x="235" y="138" text-anchor="end" class="lang-value">7.90%</text>
     </g>
     <g data-testid="lang-item">
       <circle cx="30" cy="159" r="5" fill="#083fa1" />
       <text data-testid="lang-name" x="40" y="163" class="lang-name">Markdown</text>
-      <text x="235" y="163" text-anchor="end" class="lang-value">4.63%</text>
+      <text x="235" y="163" text-anchor="end" class="lang-value">4.65%</text>
     </g>
     <g data-testid="lang-item">
       <circle cx="260" cy="109" r="5" fill="#c6538c" />
