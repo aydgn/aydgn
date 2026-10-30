@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="495" height="195" viewBox="0 0 495 195" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="titleId descId">
   <title id="titleId">WakaTime Stats</title>
-  <desc id="descId">All-time aggregate coding time: 6,823 hrs 36 mins. Top languages: JavaScript 8.18%, HTML 7.90%, Markdown 4.65%, SCSS 3.90%, Astro 2.21%, JSON 1.91%.</desc>
+  <desc id="descId">All-time aggregate coding time: 6,829 hrs 44 mins. Top languages: JavaScript 8.18%, HTML 7.89%, Markdown 4.68%, SCSS 3.90%, Astro 2.21%, JSON 1.92%.</desc>
   <style>
     .card { fill: #fffefe; stroke: #e4e2e2; }
     .title { fill: #2f80ed; font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; }
@@ -17,14 +17,14 @@
   </style>
   <rect class="card" x="0.5" y="0.5" width="494" height="194" rx="4.5" />
   <text x="25" y="32" class="title">WakaTime Stats</text>
-  <text x="25" y="52" class="subtitle">All time · 6,823 hrs 36 mins</text>
+  <text x="25" y="52" class="subtitle">All time · 6,829 hrs 44 mins</text>
   <g clip-path="url(#language-bar-clip)" data-testid="lang-progress">
-    <rect x="25.00" y="72" width="126.61" height="8" fill="#f1e05a" />
-    <rect x="151.61" y="72" width="122.28" height="8" fill="#e34c26" />
-    <rect x="273.89" y="72" width="71.97" height="8" fill="#083fa1" />
-    <rect x="345.86" y="72" width="60.37" height="8" fill="#c6538c" />
-    <rect x="406.23" y="72" width="34.21" height="8" fill="#8b949e" />
-    <rect x="440.44" y="72" width="29.56" height="8" fill="#292929" />
+    <rect x="25.00" y="72" width="126.48" height="8" fill="#f1e05a" />
+    <rect x="151.48" y="72" width="122.00" height="8" fill="#e34c26" />
+    <rect x="273.48" y="72" width="72.36" height="8" fill="#083fa1" />
+    <rect x="345.84" y="72" width="60.30" height="8" fill="#c6538c" />
+    <rect x="406.14" y="72" width="34.17" height="8" fill="#8b949e" />
+    <rect x="440.31" y="72" width="29.69" height="8" fill="#292929" />
   </g>
   <clipPath id="language-bar-clip">
     <rect x="25" y="72" width="445" height="8" rx="4" />
@@ -37,12 +37,12 @@
     <g data-testid="lang-item">
       <circle cx="30" cy="134" r="5" fill="#e34c26" />
       <text data-testid="lang-name" x="40" y="138" class="lang-name">HTML</text>
-      <text x="235" y="138" text-anchor="end" class="lang-value">7.90%</text>
+      <text x="235" y="138" text-anchor="end" class="lang-value">7.89%</text>
     </g>
     <g data-testid="lang-item">
       <circle cx="30" cy="159" r="5" fill="#083fa1" />
       <text data-testid="lang-name" x="40" y="163" class="lang-name">Markdown</text>
-      <text x="235" y="163" text-anchor="end" class="lang-value">4.65%</text>
+      <text x="235" y="163" text-anchor="end" class="lang-value">4.68%</text>
     </g>
     <g data-testid="lang-item">
       <circle cx="260" cy="109" r="5" fill="#c6538c" />
@@ -57,6 +57,6 @@
     <g data-testid="lang-item">
       <circle cx="260" cy="159" r="5" fill="#292929" />
       <text data-testid="lang-name" x="270" y="163" class="lang-name">JSON</text>
-      <text x="465" y="163" text-anchor="end" class="lang-value">1.91%</text>
+      <text x="465" y="163" text-anchor="end" class="lang-value">1.92%</text>
     </g>
 </svg>
